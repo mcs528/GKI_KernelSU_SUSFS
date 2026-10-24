@@ -64,6 +64,9 @@ CONFIG_KSU=y
 CONFIG_KPM=y
 CONFIG_KSU_SUSFS_SUS_SU=n
 
+# === Disable Werror (susfs patch unused vars) ===
+CONFIG_WERROR=n
+
 # === TMPFS Config ===
 CONFIG_TMPFS_XATTR=y
 CONFIG_TMPFS_POSIX_ACL=y
