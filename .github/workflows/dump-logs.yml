@@ -11,13 +11,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh api "repos/${{ github.repository }}/actions/runs/40053334543/logs" > logs.zip || true
+          gh api "repos/${{ github.repository }}/actions/runs/40054975214/logs" > logs.zip || true
           ls -la logs.zip
           mkdir -p extracted && cd extracted && unzip -o ../logs.zip || true
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          name: run-logs-3
+          name: run-logs-4
           path: |
             logs.zip
             extracted/
